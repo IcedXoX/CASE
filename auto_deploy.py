@@ -2,7 +2,7 @@ from aiohttp import web
 
 import os
 
-DEPLOYMENT_ROOT = "/home/tk421/Documents/CASE/" #Directory to copy files to
+DEPLOYMENT_ROOT = "/home2/albanygr/public_html/CASE/" #Directory to copy files to
 DEPLOYMENT_EXCLUDED_TYPES = ["md", "yml", "py"] #File types to exclude from deployment
 DEPLOYMENT_EXCLUDED_OBJECTS = [] #Specific files to exclude from deployment
 
