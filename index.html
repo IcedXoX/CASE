@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel = "stylesheet" href = "style.css">
+        <script src = "script.js" defer></script>
     </head>
     <body>
         <!-- NOTE: 
@@ -21,130 +22,179 @@
             Something just to remember later on.
         -->
         <!-- This is the form html as of now -->
-        <div id = "schedule">
-            <div>
-                <h2>Station Name</h2>
-                <h3>Type of Schedule</h3>
+        <div id = "radio-station-one">
+            <h2>Station Name</h2>
+            <div id = "schedule">
+                <div>
+                    <h3>Type of Schedule</h3>
+                </div>
+                <table>
+                    <!-- Bottom tr has all headers -->
+                    <tr>
+                        <!-- Headers for the table  -->
+                        <th>DAYPART</th>
+                        <th>ads/wk</th>
+                        <th>Length</th>
+                        <th>MO</th>
+                        <th>TU</th>
+                        <th>WE</th>
+                        <th>TH</th>
+                        <th>FR</th>
+                        <th>SA</th>
+                        <th>SU</th>
+                        <th>RATE</th>
+                        <th>COST</th>
+                    </tr>
+                    <tr>
+                        <td class = "time-slot">Morning (7a-10a)</td>
+                        <td><input type = "number" class = "ads"></td>
+                        <td>
+                            <select name="legnthTime">
+                                <option value="60min">:60</option>
+                                <option value="30min">:30</option>
+                                <option value="15min">:15</option>
+                                <option value="10min">:10</option>
+                            </select>
+                        </td>
+                        <td><input type = "number" class = "monday"></td>
+                        <td><input type = "number" class = "tuesday"></td>
+                        <td><input type = "number" class = "wednesday"></td>
+                        <td><input type = "number" class = "thursday"></td>
+                        <td><input type = "number" class = "friday"></td>
+                        <td><input type = "number" class = "saturday"></td>
+                        <td><input type = "number" class = "sunday"></td>
+                        <td><input type = "number" class = "rate"></td>
+                        <td><input type = "number" class = "cost."></td>
+                    </tr>
+                    <tr>
+                        <td class = "time-slot">Middays (10a-3p)</td>
+                        <td><input type = "number" class = "ads"></td>
+                        <td>
+                            <select name="legnthTime">
+                                <option value="60min">:60</option>
+                                <option value="30min">:30</option>
+                                <option value="15min">:15</option>
+                                <option value="10min">:10</option>
+                            </select>
+                        </td>
+                        <td><input type = "number" class = "monday"></td>
+                        <td><input type = "number" class = "tuesday"></td>
+                        <td><input type = "number" class = "wednesday"></td>
+                        <td><input type = "number" class = "thursday"></td>
+                        <td><input type = "number" class = "friday"></td>
+                        <td><input type = "number" class = "saturday"></td>
+                        <td><input type = "number" class = "sunday"></td>
+                        <td><input type = "number" class = "rate"></td>
+                        <td><input type = "number" class = "cost."></td>
+                    </tr>
+                    <tr>
+                        <td class = "time-slot">Afternoons(3p-6:30p)</td>
+                        <td><input type = "number" class = "ads"></td>
+                        <td>
+                            <select name="legnthTime">
+                                <option value="60min">:60</option>
+                                <option value="30min">:30</option>
+                                <option value="15min">:15</option>
+                                <option value="10min">:10</option>
+                            </select>
+                        </td>
+                        <td><input type = "number" class = "monday"></td>
+                        <td><input type = "number" class = "tuesday"></td>
+                        <td><input type = "number" class = "wednesday"></td>
+                        <td><input type = "number" class = "thursday"></td>
+                        <td><input type = "number" class = "friday"></td>
+                        <td><input type = "number" class = "saturday"></td>
+                        <td><input type = "number" class = "sunday"></td>
+                        <td><input type = "number" class = "rate"></td>
+                        <td><input type = "number" class = "cost."></td>
+                    </tr>
+                    <tr>
+                        <td class = "time-slot">Sa-Su 9a-2p</td>
+                        <td><input type = "number" class = "ads"></td>
+                        <td>
+                            <select name="legnthTime">
+                                <option value="60min">:60</option>
+                                <option value="30min">:30</option>
+                                <option value="15min">:15</option>
+                                <option value="10min">:10</option>
+                            </select>
+                        </td>
+                        <td><input type = "number" class = "monday"></td>
+                        <td><input type = "number" class = "tuesday"></td>
+                        <td><input type = "number" class = "wednesday"></td>
+                        <td><input type = "number" class = "thursday"></td>
+                        <td><input type = "number" class = "friday"></td>
+                        <td><input type = "number" class = "saturday"></td>
+                        <td><input type = "number" class = "sunday"></td>
+                        <td><input type = "number" class = "rate"></td>
+                        <td><input type = "number" class = "cost."></td>
+                    </tr>
+                    <tr>
+                        <td class = "time-slot">M-Su 12M-12M Bonus</td>
+                        <td><input type = "number" class = "ads"></td>
+                        <td>
+                            <select name="legnthTime">
+                                <option value="60min">:60</option>
+                                <option value="30min">:30</option>
+                                <option value="15min">:15</option>
+                                <option value="10min">:10</option>
+                            </select>
+                        </td>
+                        <td><input type = "number" class = "monday"></td>
+                        <td><input type = "number" class = "tuesday"></td>
+                        <td><input type = "number" class = "wednesday"></td>
+                        <td><input type = "number" class = "thursday"></td>
+                        <td><input type = "number" class = "friday"></td>
+                        <td><input type = "number" class = "saturday"></td>
+                        <td><input type = "number" class = "sunday"></td>
+                        <td><input type = "number" class = "rate"></td>
+                        <td><input type = "number" class = "cost"></td>
+                    </tr>
+                    <tr>
+                        <td class = "time-slot">Weekly Totals:</td>
+                        <td id = "adsTotal"></td>
+                        <td></td>
+                        <td id = "mondayTotal"></td>
+                        <td id = "tuesdayTotal"></td>
+                        <td id = "wednesdayTotal"></td>
+                        <td id = "thursdayTotal"></td>
+                        <td id = "fridayTotal"></td>
+                        <td id = "saturdayTotal"></td>
+                        <td id = "sundayTotal"></td>
+                        <td id = "rateTotal"></td>
+                        <td id = "costTotal"></td>                    
+                    </tr>
+                </table>
+                <div id = "button">
+                    <button id = "get-totals">Generate Weekly Totals</button>
+                </div>
+                <div id = "generate-new-schedule">
+                    <button id = "make-new-schedule">Generate New Schedule</button>
+                </div>
+                
             </div>
-            <table>
-                <!-- Bottom tr has all headers -->
-                <tr>
-                    <!-- Headers for the table  -->
-                    <th>DAYPART</th>
-                    <th>ads/wk</th>
-                    <th>MO</th>
-                    <th>TU</th>
-                    <th>WE</th>
-                    <th>TH</th>
-                    <th>FR</th>
-                    <th>SA</th>
-                    <th>SU</th>
-                    <th>RATE</th>
-                    <th>COST</th>
-                </tr>
-                <tr>
-                    <td class = "time-slot">Morning (7a-10a)</td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                </tr>
-                <tr>
-                    <td class = "time-slot">Middays (10a-3p)</td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                </tr>
-                <tr>
-                    <td class = "time-slot">Afternoons(3p-6:30p)</td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                </tr>
-                <tr>
-                    <td class = "time-slot">Sa-Su 9a-2p</td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                </tr>
-                <tr>
-                    <td class = "time-slot">M-Su 12M-12M Bonus</td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                    <td><input type = "text"></td>
-                </tr>
-                <tr>
-                    <td class = "time-slot">Weekly Totals:</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>                    
-                </tr>
-            </table>
+        
+            <div id = "add-schedule">
+
+                <select>
+                    <option value="">Radio Station One</option>
+                    <option value="">Radio Station Two</option>
+                    <option value="">Radio Station Three</option>
+                </select>
+                
+                <button id = "new-schedule">Add New Company</button>
+            </div>
+
+            <!-- NOTE:
+                I assume that this will be our monthly budget area.
+                Will leave it mostly blank until later on. 
+            -->
+            <div id = "monthy-spending">
+                <p>
+                    Monthly Budget<br>
+                    $X.XX
+                </p>
+            </div>     
         </div>
-
-        <!-- NOTE: Schedule Creation
-            When client adds a new schedule, ask client which station
-                Question: Which way?
-                    Possible ways:
-                    City,
-                    Zipcode,
-                    Radiostations name,
-                    Drop Down,
-                    Search Bar
-                    (If we go with drop down or search bar, could just use a list to hold every radio station or a data base)
-                    Need to somehow filter out each radio station (based on city for example)
-        -->
-
-        <!-- NOTE:
-            I assume that this will be our monthly budget area.
-            Will leave it mostly blank until later on. 
-        -->
-        <div>
-            <p>
-                Monthly Budget
-                $X.XX
-            </p>
-        </div>     
     </body>
 </html>
