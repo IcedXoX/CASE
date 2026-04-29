@@ -1,0 +1,42 @@
+/* Login Page Styles */
+
+body {
+    background-color: #f0f0f0;
+
+}
+
+.login-box {
+    text-align: center;
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 300px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.login-box img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.login-input {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-button {
+    width: 80%;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
