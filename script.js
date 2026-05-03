@@ -55,6 +55,13 @@ scheduleTable.addEventListener("paste", (event) =>
     }
 })
 
+
+document.getElementById("add-client-button").addEventListener("click", (event) =>
+{
+    let selected_client = document.getElementById("add-client-dropdown").value;
+    document.getElementById("client-name").innerHTML = selected_client;
+})
+
 /*
     This is for the columns. It will add up all of the cells in the column and return the total
 */
@@ -173,8 +180,6 @@ function getAllTotals()
         }   
     }
 }
-
-
 
 // Will be worked on later.
 // const generateNewSchedule = document.querySelector("#make-new-schedule");
