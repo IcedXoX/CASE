@@ -1,5 +1,6 @@
 body
 {
+    font-family: sans-serif;
 
     /* This is for the station's name */
     h2
@@ -58,7 +59,7 @@ body
     }
 
         /* This is for the adding a new schedule block. */
-    #add-schedule
+    #add-client
     {
         display: grid;
         padding: 20px 0;
@@ -68,7 +69,6 @@ body
         justify-items: center;
         width: 50%;
     }
-
 
     /* This is for the monthly spending at the bottom */
     #monthly-spending
