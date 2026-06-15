@@ -1,14 +1,15 @@
 :root {
     --primary-purple: #7b2cbf;
     --hover-purple: #5a189a;
-    --section-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-    --table-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    --section-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    --table-shadow: 0 4px 20px rgba(0,0,0,0.04);
     --border-color: #b8babe;
+    --btn-bg: #333;
+    --btn-hover-shadow: 0 4px 12px rgba(123,44,191,0.3);
+    --purple-focus-ring: 0 0 0 3px rgba(123,44,191,0.15);
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     font-family: sans-serif;
@@ -16,173 +17,7 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Header styling with logo and company name */
-.main-header {
-    position: sticky;
-    top: 0;
-    z-index: 19;
-    gap: 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px 40px;
-    background-color: #ffffff;
-    border-bottom: 3px solid black;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-}
-
-.header-field {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.header-field label {
-    font-size: 0.75rem;
-    font-weight: bold;
-}
-
-.header-field input {
-    padding: 6px 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-}
-
-.header-client-name {
-    width: fit-content;
-    min-width: 220px;
-    padding: 10px 20px;
-    border: 1px solid black;
-    background-color: #fff;
-    border-radius: 8px;
-    text-align: center;
-    transition: all 0.2s ease;
-    box-shadow: 2px 2px 0px rgba(0,0,0,1);
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: inherit;
-    outline: none;
-}
-
-.header-client-name:focus {
-    border-color: var(--primary-purple);
-    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.15);
-    text-align: left;
-}
-
-.header-logo {
-    height: 50px;
-    margin-right: 20px;
-}
-
-.add-daypart-row {
-    height: 50px;
-}
-
-.add-daypart-row td {
-    border: none !important;
-}
-
-.client-name {
-    width: fit-content;
-    min-width: 120px;
-
-    padding: 20px;
-
-    border: 1px solid black;
-    background-color: #fff;
-    border-radius: 8px;
-
-    text-align: center;
-    transition: all 0.2s ease;
-
-    margin-bottom: 0px;
-
-    box-shadow: 2px 2px 0px rgba(0,0,0,1);
-
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: inherit;
-
-    outline: none;
-}
-
-.client-name:focus {
-    border-color: var(--primary-purple);
-    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.15);
-    text-align: left;
-}
-
-
-.generate-new-schedule {
-    text-align: center;
-    margin: 40px auto 0;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Button to make schedule */
-.generate-new-schedule .make-schedule {
-    margin-top: 20px;
-    padding: 10px 24px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.generate-new-schedule .make-schedule:hover {
-    background-color: var(--primary-purple);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
-}
-
-.generate-new-schedule .date-selections {
-    margin-top: 20px;
-}
-
-
-.generate-new-schedule .week-selection {
-    align-items: center;
-    gap: 10px;
-    flex-direction: column;
-}
-
-
-.generate-new-schedule .week-range {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Main section container */
-.section {
-    width: 90%;
-    max-width: 1400px;
-    margin: 20px auto 40px;
-    border: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: var(--section-shadow);
-    transition: transform 0.3s ease;
-    overflow-y: scroll;
-    max-height: 1000px;
-}
-
-input {
-    text-align: center;
-}
+input { text-align: center; }
 
 input[type="number"] {
     width: 3ch;
@@ -193,111 +28,156 @@ input[type="number"] {
     border-radius: 4px;
 }
 
-/* Table styling */
-.table-container {
-    margin: 30px 0px;
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: var(--table-shadow);
-}
-
-.table-container table {
-    text-align: center;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.table-container th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-/* Same thing as before, but excludes the two children */
-.table-container tr:nth-child(even) td:not(:nth-last-child(-n + 2)) {
-    background-color: #fafafa;
-}
-
-.table-container th, 
-.table-container td {
+/* ── Shared: pill-style editable name ── */
+.client-name,
+.header-client-name {
+    padding: 10px 20px;
     border: 1px solid black;
-    padding: 8px;
-}
-
-.table-container .time-slot {
-    padding: 5px;
-    white-space: normal;
-}
-
-.table-container td:nth-child(2), 
-.table-container tr:nth-child(2) {
-    min-width: 75px;
-}
-
-#add-client {
-    display: grid;
-    padding: 40px;
-    margin: 20px auto 60px;
-    border: 1px solid var(--border-color);
-    gap: 20px;
-    justify-items: center;
-    width: 90%;
-    max-width: 1400px;
     background-color: #fff;
-    border-radius: 12px;
-    box-shadow: var(--section-shadow);
-}
-
-#add-client-dropdown, 
-#add-client-button {
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-}
-
-#add-client-button {
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 0 rgba(0,0,0,1);
+    font-weight: bold;
+    font-family: inherit;
+    outline: none;
     transition: all 0.2s ease;
+    width: fit-content;
+    min-width: 120px;
+}
+.client-name { font-size: 1.5rem; padding: 20px; margin-bottom: 0; }
+.header-client-name { font-size: 1.2rem; min-width: 220px; }
+
+.client-name:focus,
+.header-client-name:focus {
+    border-color: var(--primary-purple);
+    box-shadow: var(--purple-focus-ring);
+    text-align: left;
 }
 
-#add-client-button:hover {
+/* ── Shared: primary action buttons ── */
+.fc .fc-button-primary,
+.confirm-section button,
+#buttons-bottom button,
+#add-client-button,
+.generate-new-schedule .make-schedule {
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 8px 16px;
+}
+.generate-new-schedule .make-schedule { margin-top: 20px; padding: 10px 24px; }
+#add-client-button { padding: 12px 24px; font-size: 1rem; }
+
+.fc .fc-button-primary:hover,
+.confirm-section button:hover,
+#buttons-bottom button:hover,
+#add-client-button:hover,
+.generate-new-schedule .make-schedule:hover {
     background-color: var(--primary-purple);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
+    box-shadow: var(--btn-hover-shadow);
 }
 
-#monthly-spending {
-    display: flex;
-    justify-content: flex-end;
-    margin: 5px;
-}
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active,
+.confirm-section button:active,
+#buttons-bottom button:active { background-color: var(--hover-purple); }
 
-#monthly-spending p {
-    padding: 20px;
-    text-align: center;
-    border: 1px solid black;
+/* ── Shared: page sections ── */
+.section,
+#add-client,
+#calendar {
+    width: 90%;
+    max-width: 1400px;
+    margin: 20px auto 40px;
     background-color: #fff;
-    font-weight: bold;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--section-shadow);
+    padding: 40px;
 }
+.section {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 1000px;
+    transition: transform 0.3s ease;
+}
+#add-client {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 60px;
+}
+#calendar { margin: 40px auto; padding: 30px; }
 
-/* Last row styling */
-/* Last tr element, all td elements */
-tr:nth-last-child(1) td
-{
-    border-top: 2px solid black;
+/* ── Header ── */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 19;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 40px;
+    background-color: #fff;
+    border-bottom: 3px solid black;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
 }
+.header-logo { height: 50px; margin-right: 20px; }
+.header-field { display: flex; flex-direction: column; gap: 4px; }
+.header-field label { font-size: 0.75rem; font-weight: bold; }
+.header-field input { padding: 6px 10px; border: 1px solid var(--border-color); border-radius: 4px; }
+
+/* ── Generate schedule area ── */
+.generate-new-schedule {
+    text-align: center;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.generate-new-schedule .date-selections { margin-top: 20px; }
+.generate-new-schedule .week-selection { align-items: center; gap: 10px; flex-direction: column; }
+.generate-new-schedule .week-range { display: flex; flex-direction: row; align-items: center; gap: 10px; }
+
+/* ── Table container ── */
+.table-container {
+    margin: 30px 0;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: var(--table-shadow);
+    display: flex;
+    flex-direction: column;
+}
+.table-container table { text-align: center; border-collapse: collapse; width: 100%; }
+.table-container th { background-color: #f2f2f2; font-weight: bold; font-size: 0.9rem; }
+.table-container th,
+.table-container td { border: 1px solid black; padding: 8px; }
+.table-container tr:nth-child(even) td:not(:nth-last-child(-n+2)) { background-color: #fafafa; }
+.table-container tr:not(:last-child) td:nth-last-child(-n+2) { border: none; }
+.table-container .time-slot { padding: 5px; white-space: normal; }
+.table-container td:nth-child(2),
+.table-container tr:nth-child(2) { min-width: 75px; }
+
+tr:nth-last-child(1) td { border-top: 2px solid black; }
+
+/* ── Daypart ── */
+.add-daypart-row { height: 50px; }
+.add-daypart-row td { border: none !important; }
 
 .daypart-input {
     border: 1px solid transparent;
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(0,0,0,0.03);
     padding: 6px 10px;
     border-radius: 4px;
     font-family: inherit;
@@ -305,243 +185,97 @@ tr:nth-last-child(1) td
     width: calc(100% - 22px);
     text-align: left;
     cursor: text;
-    transition: all 0.2s ease;
     resize: none;
     overflow-y: hidden;
     vertical-align: middle;
+    transition: all 0.2s ease;
 }
-
-.daypart-input:hover {
-    background: rgba(0, 0, 0, 0.06);
-    border-color: var(--border-color);
-}
-
-.daypart-input:focus {
-    outline: none;
-    background: #fff;
-    border-color: var(--primary-purple);
-    box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.1);
-}
-
-/* This is for the confirm section (Are you sure? screen) */
-.confirm-section, .check-section
-{
-    display: none;
-    position: fixed;
-    color: #333;
-    background-color: #f9f9f9;
-
-    top: 50%;
-    left: 50%;
-    z-index: 21;
-
-    transform: translate(-50%, -50%);
-
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Div that holds the h2 element (radio station) and the deletion div */
-.section-name
-{
-
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    /* h2 tag */
-    .client-name
-    {
-        margin: 0px;
-    }
-}
-
-/* The container that holds the button and image for deleting */
-.delete-container
-{
-    display: inline;
-}
-
-/* CSS for both the create and delete button */
-.create-event-button, .delete-button
-{
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Trash can image and calendar add image */
-.trash-can-image, .calendar-add-image
-{
-    width: 25px;
-}
-
-/* For every tr element besides the last one to every last td element, remove border */
-.table-container tr:not(:last-child) td:nth-last-child(-n + 2){
-    border:none;
-}
-
-/* Overlay to darken background a little when on Are you sure screen */
-.overlay
-{
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 20;
-
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
+.daypart-input:hover { background: rgba(0,0,0,0.06); border-color: var(--border-color); }
+.daypart-input:focus { outline: none; background: #fff; border-color: var(--primary-purple); box-shadow: 0 0 0 3px rgba(123,44,191,0.1); }
 
 .add-daypart-button {
     cursor: pointer !important;
     text-align: center !important;
     font-weight: bold;
-    background-color: rgba(123, 44, 191, 0.08);
+    background-color: rgba(123,44,191,0.08);
     border: 1px dashed var(--primary-purple) !important;
     color: var(--primary-purple);
 }
+.add-daypart-button:hover { background-color: rgba(123,44,191,0.15); }
 
-.add-daypart-button:hover {
-    background-color: rgba(123, 44, 191, 0.15);
-}
+/* ── Add client dropdown ── */
+#add-client-dropdown,
+#add-client-button { padding: 12px 24px; font-size: 1rem; border-radius: 6px; border: 1px solid var(--border-color); }
 
-/* This is for the calendar itself */
-#calendar
-{
-    width: 90%;
-    max-width: 1400px;
-    margin: 40px auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--section-shadow);
-}
+/* ── Monthly spending ── */
+#monthly-spending { display: flex; justify-content: flex-end; margin: 5px; }
+#monthly-spending p { padding: 20px; text-align: center; border: 1px solid black; background-color: #fff; font-weight: bold; }
 
-.confirm-section button{
-    padding: 6px 6px !important;
-}
-
-/* FullCalendar Button Styles */
-.fc .fc-button-primary, .confirm-section button, #buttons-bottom button{
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    padding: 8px 16px;
-    cursor: pointer;
-}
-
-.fc .fc-button-primary:hover, .confirm-section button:hover, #buttons-bottom button:hover{
-    background-color: var(--primary-purple);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
-}
-
-.fc .fc-button-primary:not(:disabled).fc-button-active, 
-.fc .fc-button-primary:not(:disabled):active, .confirm-section button:active, #buttons-bottom button:active{
-    background-color: var(--hover-purple);
-}
-
-
-.fc .fc-toolbar-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.fc th.fc-col-header-cell {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    padding: 12px 0;
-}
-
-.fc .fc-col-header-cell-cushion {
-    color: #333;
-    text-decoration: none;
-}
-
-.check-section
-{
-    .check-section-button
-    {
-        position: fixed;
-        top: 0px;
-        right: 0px;
-        border: none;
-        background: none;
-
-        img
-        {
-            cursor: pointer;
-        }
-    }  
-
-    
-    .event-deletion
-    {
-        margin: 0 auto;
-        text-align: center;
-    }
-
-}
-
-.schedule-type-wrapper
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-/* For week that the user clicks */
-.selected-week {
-  background-color: lightcyan !important;
-}
-
-/* For events to be spaced properly */
-.fc-daygrid-event {
-    margin-bottom: 2px !important; 
-}
-
-/* For confirm button */
-#buttons-bottom
-{
+/* ── Overlays & modals ── */
+.overlay {
     display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background-color: rgba(0,0,0,0.6);
+}
+.confirm-section,
+.check-section {
+    display: none;
+    position: fixed;
+    color: #333;
+    background-color: #f9f9f9;
+    top: 50%;
+    left: 50%;
+    z-index: 21;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+.confirm-section button { padding: 6px !important; }
+.check-section button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+}
+.check-section button img { cursor: pointer; }
+
+/* ── Section name / delete controls ── */
+.section-name { display: flex; align-items: center; gap: 20px; }
+.section-name .client-name { margin: 0; }
+.delete-container { display: inline; }
+.create-event-button,
+.delete-button { background: none; border: none; cursor: pointer; }
+.trash-can-image,
+.calendar-add-image { width: 25px; }
+
+/* ── Schedule type ── */
+.schedule-type-wrapper { display: flex; align-content: center; align-items: center; gap: 10px; margin-bottom: 20px; }
+
+/* ── Calendar ── */
+.selected-week { background-color: lightcyan !important; }
+.fc-daygrid-event { margin-bottom: 2px !important; }
+.fc .fc-toolbar-title { font-size: 1.5rem; font-weight: bold; color: #333; }
+.fc th.fc-col-header-cell { background-color: #f2f2f2; font-weight: bold; padding: 12px 0; }
+.fc .fc-col-header-cell-cushion { color: #333; text-decoration: none; }
+
+/* ── Bottom buttons ── */
+#buttons-bottom {
+    display: flex;
     justify-content: center;
     padding: 10px;
-
-    /* to get it to stick to bottom */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 25;
-    background-color: rgba(123, 44, 191, 0.08);
-    border-top: 2px solid black;
-    box-shadow: 0 -2px 8px rgba(0,0,0,.15);
-    backdrop-filter: blur(7px);
-    padding-bottom: 10px;
-
+    margin: 0 auto;
     gap: 20px;
-
-    button
-    {
-        display: none;
-        padding: 10px;
-    }  
 }
+#buttons-bottom button { display: none; padding: 10px; }
 
-#table-info, #placeholder
-{
+/* ── Table info / placeholder ── */
+#table-info,
+#placeholder {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -550,17 +284,5 @@ tr:nth-last-child(1) td
     font-size: 30px;
     text-align: center;
 }
-
-#table-info
-{
-    width: 100%;
-    
-    border: 1px solid black;
-    padding: 20px;
-}
-
-.table-name
-{
-    padding: 10px;
-
-}
+#table-info { width: 100%; border: 1px solid black; padding: 20px; }
+.table-name { padding: 10px; }
