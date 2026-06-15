@@ -30,7 +30,8 @@ input[type="number"] {
 
 /* ── Shared: pill-style editable name ── */
 .client-name,
-.header-client-name {
+.header-client-name,
+.table-name {
     padding: 10px 20px;
     border: 1px solid black;
     background-color: #fff;
@@ -44,7 +45,8 @@ input[type="number"] {
     width: fit-content;
     min-width: 120px;
 }
-.client-name { font-size: 1.5rem; padding: 20px; margin-bottom: 0; }
+.client-name
+ { font-size: 1.5rem; padding: 20px; margin-bottom: 0; }
 .header-client-name { font-size: 1.2rem; min-width: 220px; }
 
 .client-name:focus,
@@ -59,7 +61,8 @@ input[type="number"] {
 .confirm-section button,
 #buttons-bottom button,
 #add-client-button,
-.generate-new-schedule .make-schedule {
+.generate-new-schedule .make-schedule,
+.event-deletion {
     background-color: var(--btn-bg);
     color: white;
     border: none;
@@ -71,12 +74,14 @@ input[type="number"] {
 }
 .generate-new-schedule .make-schedule { margin-top: 20px; padding: 10px 24px; }
 #add-client-button { padding: 12px 24px; font-size: 1rem; }
+.event-deletion {margin: 0 auto; text-align: center;}
 
 .fc .fc-button-primary:hover,
 .confirm-section button:hover,
 #buttons-bottom button:hover,
 #add-client-button:hover,
-.generate-new-schedule .make-schedule:hover {
+.generate-new-schedule .make-schedule:hover,
+.event-deletion:hover {
     background-color: var(--primary-purple);
     transform: translateY(-1px);
     box-shadow: var(--btn-hover-shadow);
@@ -85,7 +90,8 @@ input[type="number"] {
 .fc .fc-button-primary:not(:disabled).fc-button-active,
 .fc .fc-button-primary:not(:disabled):active,
 .confirm-section button:active,
-#buttons-bottom button:active { background-color: var(--hover-purple); }
+#buttons-bottom button:active,
+.event-deletion:active { background-color: var(--hover-purple); }
 
 /* ── Shared: page sections ── */
 .section,
@@ -235,7 +241,7 @@ tr:nth-last-child(1) td { border-top: 2px solid black; }
     text-align: center;
 }
 .confirm-section button { padding: 6px !important; }
-.check-section button {
+.check-section-button {
     position: fixed;
     top: 0;
     right: 0;
@@ -265,9 +271,20 @@ tr:nth-last-child(1) td { border-top: 2px solid black; }
 
 /* ── Bottom buttons ── */
 #buttons-bottom {
-    display: flex;
+    display: none;
     justify-content: center;
     padding: 10px;
+
+    /* to get it to stick to bottom */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 25;
+    background-color: rgba(123, 44, 191, 0.08);
+    border-top: 2px solid black;
+    box-shadow: 0 -2px 8px rgba(0,0,0,.15);
+    backdrop-filter: blur(7px);
     margin: 0 auto;
     gap: 20px;
 }
