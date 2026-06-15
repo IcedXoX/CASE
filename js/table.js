@@ -20,7 +20,7 @@ class ScheduleTable {
     events = new Set();
 
     colHeadings = ["DAYPART", "ads/wk", "Length", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "RATE", "COST"];
-    defaultDayParts = ["Morning (7a-10a)", "Middays (10a-3p)", "Afternoons(3p-6:30p)", "Sa-Su 9a-2p", "M-Su 12M-12M Bonus"];
+    defaultDayParts = ["Morning (7a-10a)", "Middays (10a-3p)", "Afternoons (3p-6:30p)", "Sa-Su 9a-2p", "M-Su 12M-12M Bonus"];
     rowHeadings = ["+ Add Daypart", "Totals:"];
 
     // Skip dayparts and ads/week
